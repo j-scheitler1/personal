@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .container{
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px;
+      }
+
+      .project{
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+    </style>
+    <title>My Website</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="about">
+      <div class="container">
+        <img src="images/profile.jpg" alt="Profile picture" width="100" />
+        <h1>Josh Scheitler</h1>
+        <p style="font-family: 'Courier New', Courier, monospace; color: brown">Software Engineer</p>
+        <p>
+          I am a Sophmore at Iowa State University Majoring in Software
+          Engineering
+        </p>
+      </div>
+    </section>
+    <section id="projects">
+    <div class="container">
+      <h1>Projects</h1>
+      <div class = "project">
+        <img src = "images/project01.png" alt = "project 1">
+        <h1>Project 1</h1>
+        <p>The first project was related to understanding different sorting meethods. For
+          This project I used an assortment of sorting algorithms to find the quickest method. 
+          I was given a set of points on a 2D graph and had to find the mean of the set given
+          anywhere from 1 to 10,000 points
+        </p>
+      </div>
+      <div class = "project">
+        <img src = "images/Singly-Linked-List1.png" alt = "project 2">
+        <h1>Project 2</h1>
+        <p>This project focused on linked lists specifically. I was tasked with creating
+          a doubly linked list but each node contained up to six inner nodes. I acomplished
+          this by writing a linked list from scratch as well as an iterator in order to 
+          traverse the list
+        </p>
+      </div>
+      <div class = "project">
+        <img src = "images/Mona_Lisa.png" alt = "project 3" width = 400px;>
+        <h1>Project 3</h1>
+        <p>The Last project involved me decoding a message using a binary search tree.
+          After contructing each tree, each branch left or right gave a value that then
+          corresponded with the node. Piecing this all together gave us a decoder for any
+          coded message that we were given
+        </p>
+      </div>
+    </section>
+    <section id = "contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>You can reach me at <a href ="mailto:joshs1@iastate.edu">joshs1@iastate.edu</a></p>
+        </div>
+    </section>
+    <footer>
+      <p>&copy; 2024 Josh Scheitler</p>
+    </footer>
+  </body>
+</html>
