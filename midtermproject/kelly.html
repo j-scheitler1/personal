@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="Styles/calculatorStyle.css">
+  <title>Kelly Calculator</title>
+</head>
+<body>
+  <header class="login__header">
+    <div class="login__header--container">
+      <h1 class="title__Text">Kelly Calculator</h1>
+      <div class="logo"> <a href="index.html"><img src="images/LineLeak.png" alt="Logo" width="75 px"></a></div>
+    </div>
+  </header> 
+  
+  <div class="container">
+    <p class="calculator__text">The Kelly Criterion Calculator calculates the percentage of your balance that you should bet based on the odds you input.</p>
+    <input type="number" class="input__odds" name="odds" id="odds" placeholder="Enter odds">
+    <input type="number" class="input__chances" name="chances" id="chances" placeholder=" % : Enter Chances of Winning">
+    <input type="number" class="input__balance" name="balance" id="balance" placeholder=" $ : Enter Account Balance">
+    <button class="calculate__button" onclick="calculateProb(document.getElementById('odds').value, document.getElementById('chances').value, document.getElementById('balance').value)">Calculate</button>
+    <p id="result"></p> <!-- This is where you'll display the result -->
+    <div class="navbar__container">
+      <ul class="navbar__list">
+        <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='impliedProbability.html'">Implied Probability</button></li>
+        <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='kelly.html'">Kelly Calculator</button></li>
+        <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='novig.html'">Implied Odds</button></li>
+        <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='about.html'">About us</button></li>
+      </ul>
+      <div class="navbar__container--comingsoon">
+        <p>More Features Coming Soon!</p>
+      </div>
+  </div>
+
+  <footer class="login__footer">
+    <p class="footer__text">© 2024 Kelly Calculator. All rights reserved. | Developed by Jason Bakke and Josh Scheitler</p>
+    <p class="footer__text">Gambling Problem? Call Our Hot Line at 1-800-662-4357</p>
+  </footer>
+
+  <script>
+    function calculateProb(odds, chances, balance) {
+      let result;
+      odds = parseFloat(odds);
+      chances = parseFloat(chances);
+      balance = parseFloat(balance);
+      // document.getElementById("result").innerHTML = `${odds} ${balance} ${chances}`
+      if(balance < 0){
+        document.getElementById("result").innerHTML = 
+        `Balance must be greater than 0`;
+      }
+      else if(chances < 0 || chances > 100){
+        document.getElementById("result").innerHTML = 
+        `Chances of Winning must be between 0-100`;
+      }
+      else if(odds <= -100)
+      {
+        odds = odds * -1;
+        odds = odds - 1;
+        chances = chances / 100;
+        result = ((odds*chances) - (1 - chances))/odds;
+        result *= 100.0;
+        balance = balance * (result / 100);
+        document.getElementById("result").innerHTML = 
+        `You should bet ${result.toFixed(1)}% of your account balance.
+         Which means you should place a bet of $${balance}.`;
+      }
+      else if(odds >= 100)
+      {
+        odds = odds - 1.0;
+        chances = chances / 100.0;
+        result = ((odds*chances) - (1.0 - chances))/odds;
+        result *= 100.0;
+        balance = balance * (result / 100);
+        document.getElementById("result").innerHTML = 
+        `You should bet ${result.toFixed(2)}% of Your Account Balance.
+         Which means you should place a bet of $${balance.toFixed(2)}.`;
+      }
+      else if(odds <= 100 || odds >= -100){
+        document.getElementById("result").innerHTML = "Odds must be less than -100 or greater than 100"; 
+      }
+      else{
+        document.getElementById("result").innerHTML = "Please enter a number";
+      }
+
+    }
+  </script>
+</body>
+</html>

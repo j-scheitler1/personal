@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>About Us</title>
+  <style>
+
+*{
+  margin: 0;
+  padding: 0;
+}
+            
+body {background: black;}
+canvas {display:block;}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.login__header--container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  background: #5f6366;
+  height: 100px;
+  left: 0px;
+  margin-left: 0;
+}
+
+.title__Text {
+  font-family: 'Poppins';
+  text-align: center;
+  color: #ffffff;
+  color: #4caf50;
+  text-shadow:
+  -1px -1px 0 #404040,
+  1px -1px 0 #404040,
+  -1px 1px 0 #404040,
+  1px 1px 0 #404040;  
+}
+
+h1,
+h2,
+h3,
+p {
+  color: #000000;
+  text-align: center;
+  z-index: 1000;
+}
+
+p{
+  margin-top: 3vw;
+  font-size: large;
+}
+
+.navbar__container{
+  position: fixed; /* Make the header fixed */
+  top: 6.5vw; 
+  left: 0;
+  width: 15vw;
+  height: 55vw;
+  background-color: #46494b; 
+  padding: 20px; 
+  z-index: 500;
+}
+
+.navbar__list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5vw;
+}
+
+.nav__element {
+  margin-bottom: 10px;
+}
+
+.nav__element button {
+  display: block;
+  width: 100%;
+  text-align: center; /* Center the text */
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-bottom: 2.5vw;
+  transition: box-shadow 0.3s ease; /* Add transition effect for box-shadow */
+  cursor: pointer;
+}
+
+.nav__element button:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5); /* Green glow effect */
+  border: none; /* Remove border */
+  background-color: #4bb544;
+}
+
+.navbar__container--comingsoon {
+  margin-top: 8vw;
+  color: white;
+  text-align: center;
+}
+
+.info__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -30%);
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  z-index: 1000; /* Ensure the info container is on top of the canvas */
+  box-shadow: 0 0 40px #149911; /* Add shadow for better visibility */
+}
+
+
+  
+</style>
+</head>
+<header class="login__header">
+  <div class="login__header--container">
+    <div class="logo"> <a href="index.html"><img src="images/LineLeak.png" alt="Logo" width="75 px"></a></div>
+  </div>
+</header> 
+<body>
+  <canvas id="c"></canvas>
+  <div class="info__container">
+  <h1>ComS 319: Construction of User Interfaces</h1>
+  <h2>Spring 2024</h2>
+  <h2>March 6, 2024</h2>
+  <h3><strong>Jason Bakke</strong> : <span style="color: grey">jbakke@iastate.edu</span></h3>
+  <h3><strong>Josh Scheitler</strong> : <span style="color: grey">joshs1@iastate.edu</span></h3>
+  <p>
+    Josh's favorite bet : Twelve leg parlay womens tennis only.<br><br>
+    Jason's favorite bet : The under for every Iowa football game.
+  </p>
+</div>
+  <div class="navbar__container">
+    <ul class="navbar__list">
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='impliedProbability.html'">Implied Probability</button></li>
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='kelly.html'">Kelly Calculator</button></li>
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='novig.html'">Implied Odds</button></li>
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='about.html'">About us</button></li>
+    </ul>
+    <div class="navbar__container--comingsoon">
+      <p style="color: #ffffff;">More Features Coming Soon!</p>
+      <script>
+             var c = document.getElementById("c");
+        var ctx = c.getContext("2d");
+
+        //making the canvas full screen
+        c.height = window.innerHeight;
+        c.width = window.innerWidth;
+
+        //chinese characters - taken from the unicode charset
+        var matrix = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+        //converting the string into an array of single characters
+        matrix = matrix.split("");
+
+        var font_size = 10;
+        var columns = c.width/font_size; //number of columns for the rain
+        //an array of drops - one per column
+        var drops = [];
+        //x below is the x coordinate
+        //1 = y co-ordinate of the drop(same for every drop initially)
+        for(var x = 0; x < columns; x++)
+            drops[x] = 1; 
+
+       
+        function draw()
+        {
+     
+            ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+            ctx.fillRect(0, 0, c.width, c.height);
+
+            ctx.fillStyle = "#4bb544";
+            ctx.font = font_size + "px arial";
+          
+            for(var i = 0; i < drops.length; i++)
+            {
+          
+                var text = matrix[Math.floor(Math.random()*matrix.length)];
+                
+                ctx.fillText(text, i*font_size, drops[i]*font_size);
+
+                
+                if(drops[i]*font_size > c.height && Math.random() > 0.975)
+                    drops[i] = 0;
+
+           
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 35);
+
+      </script>
+  </div>
+</body>
+</html>

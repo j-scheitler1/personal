@@ -1,0 +1,24 @@
+{
+  "images": [
+    {
+      "src": "images/Fanduel.svg",
+      "alt": "Image 1 description"
+    },
+    {
+      "src": "images/bet365.svg",
+      "alt": "Image 2 description"
+    },
+    {
+      "src": "images/betmgm.svg",
+      "alt": "Image 3 description"
+    },
+    {
+      "src": "images/dK.svg",
+      "alt": "Image 4 description"
+    },
+    {
+      "src": "images/espn.svg",
+      "alt": "Image 5 description"
+    }
+  ]
+}

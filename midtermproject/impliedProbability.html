@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="Styles/calculatorStyle.css">
+  <title>Implied Probability Calculator</title>
+</head>
+<body>
+  <header class="login__header">
+    <div class="login__header--container">
+      <h1 class="title__Text">Implied Probability Calculator</h1>
+      <div class="logo"> <a href="index.html"><img src="images/LineLeak.png" alt="Logo" width="75 px"></a></div>
+    </div>
+  </header> 
+  
+  <div class="container">
+    <p class="calculator__text">The Implied Probability Calculator converts the odds into the percentage of the bet hitting.</p>
+    <input type="number" class="input__odds" name="odds" id="odds" placeholder="Enter odds">
+    <button class="calculate__button" onclick="calculateProb(document.getElementById('odds').value)">Calculate</button>
+    <p id="result"></p> <!-- This is where you'll display the result -->
+    <div class="navbar__container">
+      <ul class="navbar__list">
+        <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='impliedProbability.html'">Implied Probability</button></li>
+        <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='kelly.html'">Kelly Calculator</button></li>
+        <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='novig.html'">Implied Odds</button></li>
+        <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='about.html'">About us</button></li>
+      </ul>
+      <div class="navbar__container--comingsoon">
+        <p>More Features Coming Soon!</p>
+    </div>
+  </div>
+
+  <footer class="login__footer">
+    <p class="footer__text">© 2024 Implied Probability Calculator. All rights reserved. | Developed by Jason Bakke and Josh Scheitler</p>
+    <p class="footer__text">Gambling Problem? Call Our Hot Line at 1-800-662-4357</p>
+  </footer>
+
+  <script>
+    function calculateProb(odds) {
+      let result;
+      odds = parseInt(odds);
+      
+      if(odds <= -100)
+      {
+        odds = odds * -1;
+        result = odds /((odds + 100));
+        result *= 100;
+        document.getElementById("result").innerHTML = "Actual Probablility " + result.toFixed(1) + "%";
+      }
+      else if(odds >= 100)
+      {
+        odds += 100;
+        odds *= 100;
+        result = (100 / odds)* 10000;
+        document.getElementById("result").innerHTML = "Actual Probablility " + result.toFixed(1) + "%";
+      }
+      else if(odds <= 100 || odds >= -100){
+        document.getElementById("result").innerHTML = "Odds must be less than -100 or greater than 100"; 
+      }
+      else{
+        document.getElementById("result").innerHTML = "Please enter a number";
+      }
+
+    }
+  </script>
+</body>
+</html>

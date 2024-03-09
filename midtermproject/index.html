@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Leak</title>
+    <link rel="icon" href="images/LineLeak.png" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="Styles/style.css"> <!-- Link to your CSS file -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header class="main__header">
+  <img class="header__logo" src="images/MainBannerLogo.jpg" alt="">
+  <a href="create_account.html"><button class="Signup__Create">Sign up / Create Account</button></a>
+</header>
+<body>
+  
+  <div class="navbar__container">
+    <ul class="navbar__list">
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='impliedProbability.html'">Implied Probability</button></li>
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='kelly.html'">Kelly Calculator</button></li>
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='novig.html'">Implied Odds</button></li>
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='about.html'">About us</button></li>
+    </ul>
+    <div class="navbar__container--comingsoon">
+      <p>More Features Coming Soon!</p>
+    </div>
+  </div>
+    
+
+  <div class="events__containers">
+    <div class="table-container"></div>
+    
+    <p class="game" style="color: black;">Baltimore Orioles <br>Los Angeles Dodgers</p>
+    <p class="game" style="color: black;">Seattle Mariners <br>Toronto Blue Jays</p>
+    <p class="game" style="color: black;">Philadelphia Phillies <br>San Fransisco Giants</p>
+    <p class="game" style="color: black;">Arizona Diamondbacks <br>Boston Red Sox</p>
+    <p class="game" style="color: black;">Colorado Rockies <br>Detroit Tigers</p>
+    <p class="game" style="color: black;">Kansas City Royals <br>Miami Marlins</p>
+  
+  </div>
+
+    <script src="index.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

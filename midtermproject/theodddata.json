@@ -1,0 +1,184 @@
+{
+  "events": [
+    {
+      "event_name": "Baltimore Orioles_Los Angeles Dodgers",
+      "bookmaker": "Fanduel",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Baltimore Orioles_Los Angeles Dodgers",
+      "bookmaker": "Bet365",
+      "odd_1": -115,
+      "odd_2": 105
+    },
+    {
+      "event_name": "Baltimore Orioles_Los Angeles Dodgers",
+      "bookmaker": "BetMGM",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Baltimore Orioles_Los Angeles Dodgers",
+      "bookmaker": "DraftKings",
+      "odd_1": -116,
+      "odd_2": -102
+    },
+    {
+      "event_name": "Baltimore Orioles_Los Angeles Dodgers",
+      "bookmaker": "ESPN Bet",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Seattle Mariners_Toronto Blue Jays",
+      "bookmaker": "Fanduel",
+      "odd_1": -101,
+      "odd_2": 101
+    },
+    {
+      "event_name": "Seattle Mariners_Toronto Blue Jays",
+      "bookmaker": "Bet365",
+      "odd_1": -102,
+      "odd_2": 102
+    },
+    {
+      "event_name": "Seattle Mariners_Toronto Blue Jays",
+      "bookmaker": "BetMGM",
+      "odd_1": -103,
+      "odd_2": 103
+    },
+    {
+      "event_name": "Seattle Mariners_Toronto Blue Jays",
+      "bookmaker": "DraftKings",
+      "odd_1": -115,
+      "odd_2": -102
+    },
+    {
+      "event_name": "Seattle Mariners_Toronto Blue Jays",
+      "bookmaker": "ESPN Bet",
+      "odd_1": -122,
+      "odd_2": 106
+    },
+    {
+      "event_name": "Philadelphia Phillies_San Fransisco Giants",
+      "bookmaker": "Fanduel",
+      "odd_1": -127,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Philadelphia Phillies_San Fransisco Giants",
+      "bookmaker": "Bet365",
+      "odd_1": -112,
+      "odd_2": 109
+    },
+    {
+      "event_name": "Philadelphia Phillies_San Fransisco Giants",
+      "bookmaker": "BetMGM",
+      "odd_1": -121,
+      "odd_2": 108
+    },
+    {
+      "event_name": "Philadelphia Phillies_San Fransisco Giants",
+      "bookmaker": "DraftKings",
+      "odd_1": -116,
+      "odd_2": -102
+    },
+    {
+      "event_name": "Philadelphia Phillies_San Fransisco Giants",
+      "bookmaker": "ESPN Bet",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Arizona Diamondbacks_Boston Red Sox",
+      "bookmaker": "Fanduel",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Arizona Diamondbacks_Boston Red Sox",
+      "bookmaker": "Bet365",
+      "odd_1": -115,
+      "odd_2": 105
+    },
+    {
+      "event_name": "Arizona Diamondbacks_Boston Red Sox",
+      "bookmaker": "BetMGM",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Arizona Diamondbacks_Boston Red Sox",
+      "bookmaker": "DraftKings",
+      "odd_1": -116,
+      "odd_2": -102
+    },
+    {
+      "event_name": "Arizona Diamondbacks_Boston Red Sox",
+      "bookmaker": "ESPN Bet",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Colorado Rockies_Detroit Tigers",
+      "bookmaker": "Fanduel",
+      "odd_1": -125,
+      "odd_2": 101
+    },
+    {
+      "event_name": "Colorado Rockies_Detroit Tigers",
+      "bookmaker": "Bet365",
+      "odd_1": -115,
+      "odd_2": 105
+    },
+    {
+      "event_name": "Colorado Rockies_Detroit Tigers",
+      "bookmaker": "BetMGM",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Colorado Rockies_Detroit Tigers",
+      "bookmaker": "DraftKings",
+      "odd_1": -116,
+      "odd_2": -102
+    },
+    {
+      "event_name": "Colorado Rockies_Detroit Tigers",
+      "bookmaker": "ESPN Bet",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Kansas City Royals_Miami Marlins",
+      "bookmaker": "Fanduel",
+      "odd_1": -123,
+      "odd_2": 101
+    },
+    {
+      "event_name": "Kansas City Royals_Miami Marlins",
+      "bookmaker": "Bet365",
+      "odd_1": -115,
+      "odd_2": 105
+    },
+    {
+      "event_name": "Kansas City Royals_Miami Marlins",
+      "bookmaker": "BetMGM",
+      "odd_1": -120,
+      "odd_2": 100
+    },
+    {
+      "event_name": "Kansas City Royals_Miami Marlins",
+      "bookmaker": "DraftKings",
+      "odd_1": -116,
+      "odd_2": -102
+    },
+    {
+      "event_name": "Kansas City Royals_Miami Marlins",
+      "bookmaker": "ESPN Bet",
+      "odd_1": -120,
+      "odd_2": 10000
+    }
+  ]
+}

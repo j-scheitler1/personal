@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="Styles/calculatorStyle.css">
+  <title>No Vig Calculator</title>
+</head>
+<body>
+  <header class="login__header">
+    <div class="login__header--container">
+      <h1 class="title__Text">No Vig Calculator</h1>
+      <div class="logo"> <a href="index.html"><img src="images/LineLeak.png" alt="Logo" width="75 px"></a></div>
+    </div>
+  </header> 
+  
+  <div class="container">
+    <p class="calculator__text">The No Vig Calculator calculates implied probability and then adjusts it to equal 100%. Using the adjusted probability it outputs the true odds.</p>
+    <input type="number" class="input__favorite" name="favorite" id="favorite" placeholder="- Enter Favorite odds">
+    <input type="number" class="input__underdog" name="underdog" id="underdog" placeholder="+ Enter Underdog odds">
+    <button class="calculate__button" onclick="calculateProb(document.getElementById('favorite').value, document.getElementById('underdog').value)">Calculate</button>
+     <p id="result"></p> <!--This is where you'll display the result -->
+  </div>
+
+    <div class="navbar__container">
+    <ul class="navbar__list">
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='impliedProbability.html'">Implied Probability</button></li>
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='kelly.html'">Kelly Calculator</button></li>
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='novig.html'">Implied Odds</button></li>
+      <li class="nav__element"><button class="nav__element--button" onclick="window.location.href='about.html'">About us</button></li>
+    </ul>
+    <div class="navbar__container--comingsoon">
+      <p>More Features Coming Soon!</p>
+    </div>
+  </div>
+  <footer class="login__footer">
+    <p class="footer__text">© 2024 No Vig Calculator. All rights reserved. | Developed by Jason Bakke and Josh Scheitler</p>
+    <p class="footer__text">Gambling Problem? Call Our Hot Line at 1-800-662-4357</p>
+  </footer>
+
+  <script>
+    function calculateProb(favorite, underdog) {
+      let resultFav;
+      let resultUnd;
+      let oddsFav;
+      let oddsUnd;
+      let favoriteProb;
+      let underdogProb;
+      let odds;
+      favorite = parseFloat(favorite);
+      underdog = parseFloat(underdog);
+      if(favorite < -100 && underdog > 100)
+      {
+        favorite = favorite * -1.0;
+        favoriteProb = favorite /((favorite + 100.0));
+        favoriteProb *= 100.0;
+
+        underdogProb = 100 /((underdog + 100.0));
+        underdogProb *= 100.0;
+
+        
+        resultFav = (favoriteProb / (favoriteProb + underdogProb)) * 100.0;
+        resultUnd = (underdogProb / (underdogProb + favoriteProb)) * 100.0;
+        odds = (100.0 / (resultUnd / 100.0)) - 100.0;
+        document.getElementById("result").innerHTML = 
+        `No-Vig % : Odds = <br>
+         Favorite = ${resultFav.toFixed(2)}% : ${(odds * -1.0).toFixed(2)}<br>
+         Underdog = ${resultUnd.toFixed(2)}% : ${odds.toFixed(2)}`;
+      }
+      else if(underdog <= 100){
+        document.getElementById("result").innerHTML = `Underdog must be greater than 100`;
+      }
+      else if(favorite >= -100){
+        document.getElementById("result").innerHTML = `Favorite must be less than -100`; 
+      }
+      else{
+        document.getElementById("result").innerHTML = "Please enter a number";
+      }
+
+    }
+  </script>
+</body>
+</html>
