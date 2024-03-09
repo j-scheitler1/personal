@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: #06070e;
+  background-size: cover;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.login__header--container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  background: #5f6366;
+  height: 100px;
+  left: 0px;
+  margin-left: 0;
+  z-index: 1000;
+}
+
+.title__Text {
+  font-family: 'Poppins';
+  text-align: center;
+  color: #ffffff;
+  color: #4caf50;
+  text-shadow:
+  -1px -1px 0 #404040,
+  1px -1px 0 #404040,
+  -1px 1px 0 #404040,
+  1px 1px 0 #404040;  
+}
+
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  max-width: 400px;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px #149911;
+  border-radius: var(--border-radius);
+  background: #dedede;
+}
+#result{
+  text-align: center;
+}
+.input__odds,
+.input__bankroll {
+  margin-bottom: 1vw;
+  /* Add margin between the inputs */
+}
+.input__chances,
+.input__balance{
+  width: 50%;
+  margin-bottom: 1vw;
+}
+.input__favorite,
+.input__underdog{
+  width: 40%;
+  margin-bottom: 1vw;
+}
+
+.input__odds::placeholder,
+.input__bankroll::placeholder {
+  color: #999;
+  /* Placeholder text color */
+}
+.input__odds::-webkit-inner-spin-button,
+.input__bankroll::-webkit-inner-spin-button,
+.input__chances::-webkit-inner-spin-button,
+.input__balance::-webkit-inner-spin-button,
+.input__favorite::-webkit-inner-spin-button,
+.input__underdog::-webkit-inner-spin-button
+ {
+  -webkit-appearance: none;
+}
+.calculator__text{
+  text-align: center;
+  font-family: 'Poppins';
+  margin-top: -1vw;
+  color: #404040;
+}
+
+.calculate__button,
+.login__button {
+  background-color: #4caf50;
+  /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0vw;
+}
+
+.login__footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.footer__text {
+  font-size: 14px;
+}
+
+.footer__text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.signup__button {
+  display: flex;
+  align-items: center;
+}
+
+
+.signup__button {
+  margin-left: 10px;
+}
+
+.navbar__container{
+  position: fixed; /* Make the header fixed */
+  top: 6vw; 
+  left: 0;
+  width: 15vw;
+  height: 55vw;
+  background-color: #46494b; 
+  padding: 20px; 
+  z-index: 500;
+}
+
+.navbar__list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5vw;
+}
+
+.nav__element {
+  margin-bottom: 10px;
+}
+
+.nav__element button {
+  display: block;
+  width: 100%;
+  text-align: center; /* Center the text */
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-bottom: 2.5vw;
+  transition: box-shadow 0.3s ease; /* Add transition effect for box-shadow */
+  cursor: pointer;
+}
+
+.nav__element button:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5); /* Green glow effect */
+  border: none; /* Remove border */
+  background-color: #4bb544;
+}
+
+.navbar__container--comingsoon {
+  margin-top: 8vw;
+  color: white;
+  text-align: center;
+}

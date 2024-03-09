@@ -1,0 +1,163 @@
+/* Additional styles for the header */
+.main__header {
+  position: fixed; /* Make the header fixed */
+  top: 0; 
+  left: 0;
+  width: 100%;
+  background-color: #5f6366; 
+  padding: 20px; 
+  z-index: 1000; 
+}
+
+.main__header img {
+  max-height: 100px; 
+  vertical-align: middle; 
+}
+
+.Signup__Create {
+  background-color: #4bb544; 
+  color: white; /* Text color */
+  border: transparent;
+  padding: 10px 20px; /* Add padding */
+  position: absolute;
+  transform: translate(55vw, 2rem);
+  vertical-align: right;
+  cursor: pointer;
+}
+
+.Signup__Create a {
+  text-decoration: none; /* Remove underline for anchor text */
+  color: white; /* Text color */
+}
+/* 
+/* Adjust body padding to prevent content from being hidden behind the header */
+body {
+  padding-top: 60px; /* Add padding to the top of the body equal to the header height */
+  background-color: black;
+} 
+
+.navbar__container{
+  position: fixed; /* Make the header fixed */
+  top: 9.1vw; 
+  left: 0;
+  width: 15vw;
+  height: 45vw;
+  background-color: #46494b; 
+  padding: 20px; 
+  z-index: 500;
+}
+
+.navbar__list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5vw;
+}
+
+.nav__element {
+  margin-bottom: 10px;
+}
+
+.nav__element button {
+  display: block;
+  width: 100%;
+  text-align: center; /* Center the text */
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-bottom: 2.5vw;
+  transition: box-shadow 0.3s ease; /* Add transition effect for box-shadow */
+  cursor: pointer;
+}
+
+.nav__element button:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5); /* Green glow effect */
+  border: none; /* Remove border */
+  background-color: #4bb544;
+}
+
+.navbar__container--comingsoon {
+  margin-top: 8vw;
+  color: white;
+  text-align: center;
+}
+
+.events__containers {
+  position: fixed;
+  top: 9.1vw; /* Adjust according to your layout */
+  left: 15vw; 
+  height: 45vw;
+  right: 0;
+  bottom: 0;
+  background-color: #25272a; /* Adjust background color */
+  padding: 20px;
+
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.games__going,
+.table-container {
+  width: 200px; 
+  padding: 0 10px; 
+  box-sizing: border-box;
+}
+
+.table-container {
+  position: fixed;
+  margin: 50px auto; /* Center the table container */
+  /*width: 80%; /* Set the width of the table container */
+  transform: translate(45vw, 2.5vw);
+}
+
+
+table {
+  width: 40vw;
+  position: fixed;
+  border-radius: 20px;
+  height: 5vw; /* Set the table width to fill the container */
+  border-collapse: collapse;
+}
+
+td {
+  border-radius: 20px;
+  padding: 5px; /* Add padding to table cells */
+  border: 1px solid #000000; /* Add border to table cells */
+  color: rgb(0, 0, 0); 
+  font-size: 'Poppins';
+  background-color: rgb(255, 255, 255) ;
+}
+
+tr:nth-child(3n) {
+  background-color: #25272a; /* Background color to blend with the background */
+}
+
+
+
+
+tr:hover {
+  background-color: #4bb544; /* Hover effect for rows */
+}
+
+p{
+  color: white;
+}
+
+.game {
+  
+  text-align: center; /* Center the text */
+  font-size: large;
+  margin: 30px auto; /* Center the paragraphs and add space between them */
+  width: 15vw; /* Set a fixed width */
+  background-color: #ffffff; /* Match background color */
+  padding: .25vw;
+  
+  transform: translate(-20vw, -1.8vw);
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+
