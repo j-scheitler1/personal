@@ -1,0 +1,134 @@
+.main_header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #5f6366 ; 
+  padding: 30px 20px; 
+  color: white; 
+}
+
+.main_footer {
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #040F0F;
+  padding: 30px 20px; 
+  color: white; 
+}
+
+.header_buttons {
+  background-color: #248232; 
+  border: none;
+  margin-left: 20px;
+  padding: 10px 20px; 
+  color: white; 
+  text-transform: uppercase; 
+  border-radius: 5px;
+  transition: background-color 0.3s; 
+}
+
+.header_buttons:hover {
+  background-color: #2BA84A; 
+}
+
+.header_buttons a {
+  color: white; 
+  text-decoration: none; 
+}
+
+.page_container{
+  background-color: #000000;
+}
+
+.table_header{
+  color:  rgb(38, 38, 38);
+}
+
+.table_element{
+  color: rgb(38, 38, 38);
+}
+
+.main_table_title{
+  margin-bottom: 30px;
+  color:  rgb(38, 38, 38);
+}
+
+.table_return{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+main{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.calculator_title{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: xx-large;
+  color: #ffffff;
+  padding: auto;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+#result {
+  font-size: 1em;
+  color: green;
+  padding-top: 10px;
+}
+
+/* New Flexbox styles for centering the calculator */
+
+.flex_center {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 72vh; 
+  background-color: #000000;
+}
+
+.calc_holder {
+  background-color: white;
+  padding: 20px; 
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+  border-radius: 10px; 
+  text-align: center; 
+}
+
+input, button {
+  margin: 10px; 
+  padding: 10px;
+  border-radius: 5px; 
+  border: 1px solid #ccc; 
+}
+
+button {
+  background-color: #007612; 
+  color: white; 
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
